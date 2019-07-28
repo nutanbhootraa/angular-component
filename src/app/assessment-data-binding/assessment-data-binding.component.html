@@ -1,0 +1,5 @@
+<br>
+<input type="text" class="form-control" [(ngModel)] = "userName" ngDefaultControl>
+<button class="btn btn-primary" [disabled]="!userName" (click)="OnUpdateUserName()">Update Username</button>
+
+<p>UserName is {{ userName }}</p>
