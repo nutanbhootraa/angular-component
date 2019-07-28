@@ -1,0 +1,13 @@
+Create component : 
+ 1) Manually :
+	a) export class AComponent {}
+	b) Decorator : @Component()
+	c) inside @Component : add selector,templateUrl,styleUrls
+	d) import Component from angular/core
+	e) register new component in app.module.ts
+	
+ 2) ng generate component AComponent or ng g c Acomponent
+
+Inline template/style :
+ 1) Replace templateUrl with template
+ 2) Replace styleUrl to styles
