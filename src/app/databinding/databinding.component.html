@@ -19,7 +19,25 @@ retrieve from get method status is : {{ getServerStatus() }}
   [disabled]="!allowNewServer"
   (click)="OnCreateServer()">Add Servers</button>
 
-{{ serverCreationStatus }}
+<p *ngIf="serverCreated; else noServer">created server :: {{serverName}}</p>
+
+<!--else with Marker-->
+<ng-template #noServer>
+  <p>No server</p>
+</ng-template>
+
+<p [ngStyle]="{backgroundColor : getColor()}"
+[ngClass]="{online : serverStatus==='online'}"
+>Server status is :: {{ serverStatus }}</p>
+
+<p [ngStyle]="{backgroundColor : getColor()}">Server status is :: {{ serverStatus }}</p>
+
+<p> Total created servers are :</p>
+
+<p *ngFor="let server of servers"> {{ server }}</p>
+
 
 <!-- assessment -->
 <app-assessment-data-binding></app-assessment-data-binding>
+
+<app-directive-assessment></app-directive-assessment>

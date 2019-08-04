@@ -8,6 +8,7 @@ import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { AssessmentDataBindingComponent } from './assessment-data-binding/assessment-data-binding.component';
+import { DirectiveAssessmentComponent } from './directive-assessment/directive-assessment.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AssessmentDataBindingComponent } from './assessment-data-binding/assess
     WarningAlertComponent,
     SuccessAlertComponent,
     DatabindingComponent,
-    AssessmentDataBindingComponent
+    AssessmentDataBindingComponent,
+    DirectiveAssessmentComponent
   ],
   imports: [
     BrowserModule,

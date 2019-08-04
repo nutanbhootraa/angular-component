@@ -1,0 +1,26 @@
+<p>directive-assessment works!</p>
+
+<button class="btn btn-primary"
+(click)="onToggle()"
+>Display details</button>
+
+<p *ngIf="display; else displayToggled">{{ password1 }}</p>
+<ng-template #displayToggled>
+  <p> {{ password2 }}
+  </p></ng-template>
+
+
+<!--<p> Log for passwords :: </p>
+<div *ngFor="let log of logs"
+     [ngStyle]="{backgroundColor : log >=5 ? 'blue' : 'transparent'}"
+     [ngClass]="{'white-text' : log>=5}">
+  {{ log }}
+</div> -->
+
+
+<p> Log for passwords :: </p>
+<div *ngFor="let log of logs; let i = index"
+     [ngStyle]="{backgroundColor : i >=5 ? 'blue' : 'transparent'}"
+     [ngClass]="{'white-text' : i>=5}">
+  {{ log }}
+</div>
